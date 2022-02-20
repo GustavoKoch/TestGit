@@ -1,0 +1,429 @@
+
+* {
+    padding: 0;
+}
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+/*CSS part Yegor*/
+--nav-color:black;
+--nav-subcolor: #242020e6;
+--font-hover-color: orangered;
+--border-button: lightcoral;
+--font-in-elements: azure;
+
+
+    font-family: "Source Serif 4", Helvetica, sans-serif;
+    font-weight: 500;
+/*End*/
+    /*Use of custom properties*/
+
+ --mycolor:  #fff5edcc;  
+
+--imgTeq1: url("https://images.unsplash.com/photo-1634003311194-152e30e732f7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8bWFyZ2FyaXRhfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
+--imgTeq2: url("src/images/cocktails/daniel-horvath-joaNTMyVSTc-unsplash.jpg");
+--imgTeq3: url("https://images.pexels.com/photos/7809762/pexels-photo-7809762.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+
+--imgVod1: url("https://images.unsplash.com/photo-1576874208717-bfe3af939a4d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Ymxvb2R5JTIwbWFyeXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
+--imgVod2: url("https://images.unsplash.com/photo-1633152685816-8cd4a7443c84?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bW9zY293JTIwbXVsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
+--imgVod3: url("src/images/cocktails/pexels-amine-9811853.jpg");
+
+
+--imgRum1: url("https://images.unsplash.com/photo-1630541010111-1bd604c9aba2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZGFpcXVpcmklMjBjb2NrdGFpbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
+--imgRum2: url("src/images/cocktails/leiliane-fagundes-1-PGBJywxOk-unsplash.jpg");
+--imgRum3: url("https://images.unsplash.com/photo-1622720757991-6590da48aa50?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmFzcGJlcnJ5JTIwbW9qaXRvJTIwY29ja3RhaWx8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60");
+
+
+--imgGin1: url("https://images.unsplash.com/photo-1497534446932-c925b458314e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8dG9tJTIwY29sbGlucyUyMGNvY2t0YWlsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
+--imgGin2: url("https://images.unsplash.com/photo-1601924381523-019b78541b95?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGF2aWF0aW9uJTIwY29ja3RhaWx8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60");
+--imgGin3: url("https://images.unsplash.com/photo-1512103865222-dcf9531c9961?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGVndSUyMGNsdWIlMjBjb2NrdGFpbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
+
+--imgWhi1: url("src/images/cocktails/adam-jaime-dmkmrNptMpw-unsplash.jpg");
+
+--imgWhi2: url("src/images/cocktails/alison-marras-3j2MJ3eOLcs-unsplash.jpg");
+
+--imgWhi3: url("src/images/cocktails/pexels-geraud-pfeiffer-6542662.jpg");
+
+background-color: var(--mycolor);
+
+}
+
+a {all:unset}
+
+.section_menu {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.menu {
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: space-evenly;
+    justify-content: center;
+    gap: 30px;
+    box-shadow: inset;
+}
+
+h1 {
+    font-size: 6rem;
+    color: var(--font-hover-color);
+    text-align: center;
+}
+
+.card {
+    height: 520px;
+    width: 400px;
+    border-radius: 1.5rem;
+    border: none;
+    overflow: hidden;
+    max-width: 460px;
+    min-width: 370px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.menu  .card:hover {
+    opacity: 0.5;
+    transition: 0.3s;
+    border: 4px solid var(--font-hover-color);
+    border-radius: 2.2rem;
+    }
+
+
+.card .pic {    
+    width: 100%; height: 400px;
+    border-top-left-radius: 1.5rem; 
+    border-top-right-radius: 1.5rem;
+    background-position: center;
+    background-size: cover;
+     }
+
+
+.description {
+    display:grid;
+    grid-template: repeat(3, auto) / repeat(2, minmax(50px,200px));
+    grid-template-areas: 
+        "title title"
+        "diff  rat"
+        ".   fav";
+   
+    justify-items: center;
+    justify-content: space-between;
+    background: var(--font-hover-color);
+    height: 120px;
+    color: var(--font-in-elements);
+    letter-spacing: 0.05rem;
+    z-index: 100;
+
+}
+/*Title Cocktail*/
+.description h3 { 
+    grid-area:title;/*position in the grid*/
+    justify-self: center; /*Title in the center*/
+    margin:auto;
+    padding: 0.3rem 0;
+    font-size: 1.5rem;
+}
+/*Difficulty preparation*/
+.description h4 {
+    grid-area:diff;/*position in the grid*/
+    height:1rem;
+    margin:auto;   /*for positioning elements*/
+    align-self: start;
+    padding-bottom: 0.5rem;
+    font-size: 1.2rem;
+    margin-left: 2.3rem;
+}
+
+/*CSS for stars*/
+.ratings11,
+.ratings12,
+.ratings13,
+.ratings21,
+.ratings22,
+.ratings23,
+.ratings31,
+.ratings32,
+.ratings33 {
+    transform: scale(1.1);
+    display: inline-flex; /*All items are in a row*/
+    width: 2rem; height: 2rem;
+    align-items: center;
+    color: #ffc400;/*Make stars yellow*/
+    grid-area:rat;/*position in the grid*/
+    margin:auto; /*for positioning elements*/
+}
+
+.description input, 
+.heart input {
+    display: none; /*Hide input box for all Stars and Hearts*/
+}
+
+.ratings11 input + label,
+.ratings12 input + label,
+.ratings13 input + label, 
+.ratings21 input + label,
+.ratings22 input + label,
+.ratings23 input + label,
+.ratings31 input + label,
+.ratings32 input + label,
+.ratings33 input + label {
+    cursor: pointer;
+    width: 50px;
+    background:var(--font-hover-color);
+}
+
+.ratings11 input:checked + label ~ label,
+.ratings12 input:checked + label ~ label,
+.ratings13 input:checked + label ~ label,
+.ratings21 input:checked + label ~ label,
+.ratings22 input:checked + label ~ label,
+.ratings23 input:checked + label ~ label,
+.ratings33 input:checked + label ~ label,
+.ratings31 input:checked + label ~ label,
+.ratings32 input:checked + label ~ label,
+.ratings33 input:checked + label ~ label  /*By clickung one label from the series makes color black*/
+  { 
+      color: rgb(20, 19, 19);
+}
+
+
+/*CSS for all 9 hearts*/
+
+div.heart {    
+    margin: 0.5rem 5rem 0 auto;
+    grid-area:fav;/*position in the grid*/   
+    position: relative;
+     
+}
+
+#fav11 + label:before, 
+#fav12 + label:before,
+#fav13 + label:before, 
+#fav21 + label:before,
+#fav22 + label:before, 
+#fav23 + label:before,
+#fav31 + label:before, 
+#fav32 + label:before,
+#fav33 + label:before  {
+    content: "\1F5A4"; /*Unicode Blackheart*/    
+}
+	
+#fav11:checked + label::before,
+#fav12:checked + label::before,
+#fav13:checked + label::before,
+#fav21:checked + label::before,
+#fav22:checked + label::before,
+#fav23:checked + label::before,
+#fav31:checked + label::before,
+#fav32:checked + label::before,
+#fav33:checked + label::before {
+    background-color: transparent;     
+}
+
+#fav11:checked + label::after,
+#fav12:checked + label::after,
+#fav13:checked + label::after,
+#fav21:checked + label::after,
+#fav22:checked + label::after,
+#fav23:checked + label::after,
+#fav31:checked + label::after,
+#fav32:checked + label::after,
+#fav33:checked + label::after {
+    color: Black;/*color for the label (but we want only letters!)*/
+    border: 1px solid transparent; /*Transparent border for the label (not black!)*/
+    content: "❤️ Liked!";
+    position:absolute; right: -4.7rem; top:-.01rem;/*If click the second heart overlapes the black*/
+    width: 6rem;
+    height: 4rem;
+
+}
+
+
+
+
+/*Grid definition for the 3 containers with pictures*/
+
+
+.pic.vod1 {   
+    background-image:var(--imgVod1);}
+
+.pic.vod2 {   
+    background-image:var(--imgVod2);}
+.pic.vod3 {   
+    background-image:var(--imgVod3);}
+
+.pic.rum1 {   
+    background-image:var(--imgRum1); }
+
+.pic.rum2 {   
+    background-image:var(--imgRum2);}
+
+.pic.rum3 {   
+    background-image:var(--imgRum3);}
+
+.pic.gin1 {   
+    background-image:var(--imgGin1);}    
+.pic.gin2{   
+    background-image:var(--imgGin2);}    
+.pic.gin3 {   
+    background-image:var(--imgGin3); }
+
+.pic.teq1 {   
+        background-image:var(--imgTeq1); }
+.pic.teq2 {   
+        background-image:var(--imgTeq2); }
+.pic.teq3 {   
+    background-image:var(--imgTeq3); }
+
+.pic.whi1 {
+    background-image: var(--imgWhi1);
+}
+
+.pic.whi2 {
+    background-image: var(--imgWhi2);
+}
+
+.pic.whi3 {
+    background-image: var(--imgWhi3);
+}
+
+/*Yegor part*/
+/*Header*/
+header {
+    display: flex;
+    background-color: var(--nav-color)
+}
+
+li a {
+    font-family: "Source Serif 4", Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: var(--font-in-elements);
+    text-decoration: none;
+}
+
+.logo {
+    cursor: pointer;
+    height: 4rem;
+}
+.top_part {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.profile_icon {
+    cursor: pointer;
+    width: auto;
+    height: 2.8rem;
+    margin-top: 5px;
+}
+
+#search_input {
+    width: 55vw;
+    height: 3vw;
+}
+button {
+    height: 3vw;
+    width: 9vw;
+    border: none;
+    border-radius: 3px;
+    transition: all 0.4s ease 0s;
+    background: var(--border-button);
+    color: var(--font-in-elements);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+} 
+
+button:hover {
+    background:var(--font-hover-color) ;
+}
+
+.bottom_part {
+    background-color: var(--nav-subcolor);
+    text-align: center;
+    border-top: 2px solid var(--border-button);
+}
+
+ul li { 
+    display: inline-block;
+    list-style: none;
+    padding: 0 4% 10px 4%;
+}
+li a {
+    transition: all 0.4s ease 0s;
+}
+li a:hover {
+color: var(--font-hover-color);}
+
+
+
+
+    /*Footer*/
+footer {
+    background-color: var(--nav-color);
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 20px;
+    margin-top: 30rem;
+}
+
+
+
+@media only screen and (max-width: 1300px){
+    
+.card {
+    height: 320px;
+    width: 300px;
+}
+
+.card .pic {    
+    width: 100%; height: 200px;
+     }
+
+}
+
+    
+@media only screen and (max-width: 750px) {
+    .logo {
+        display: none;
+    }
+    .profile_icon {
+        height: 3rem;
+        margin-top: 5px;
+    }
+    #search_input {
+        width: 20rem;
+        height: 3rem;
+    }
+    button {
+        height: 3.1rem;
+        width: 6rem;
+    }
+    .top_part {
+        height: 5rem;
+    }
+}
+    
+@media only screen and (max-width: 480px) {
+        /*Header*/
+      
+    .top_part {
+        display:none;
+    }
+    
+    h1 {
+        font-size: 3rem
+    }
+      
+    ul li {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
+}
