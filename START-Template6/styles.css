@@ -1,0 +1,599 @@
+* {
+	padding: 0;
+}
+
+a {all: unset;}
+
+
+
+body {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	/*CSS part Yegor*/
+	--nav-color: black;
+	--nav-subcolor: #242020e6;
+	--font-hover-color: orangered;
+	--font-in-elements: azure;
+	--border-button: lightcoral;
+	
+	font-family: "Source Serif 4", Helvetica, sans-serif;
+	font-weight: 500;
+	font-size: 0.7em;
+	/*End*/
+	/*Use of custom properties*/
+	--mycolor: #fff5edcc;
+	--imgTeq1: url("https://images.unsplash.com/photo-1634003311194-152e30e732f7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8bWFyZ2FyaXRhfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
+	--imgTeq2: url("src/images/cocktails/daniel-horvath-joaNTMyVSTc-unsplash.jpg");
+	--imgTeq3: url("https://images.pexels.com/photos/7809762/pexels-photo-7809762.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+	--imgVod1: url("https://images.unsplash.com/photo-1576874208717-bfe3af939a4d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Ymxvb2R5JTIwbWFyeXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
+	--imgVod2: url("https://images.unsplash.com/photo-1633152685816-8cd4a7443c84?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bW9zY293JTIwbXVsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
+	--imgVod3: url("https://images.pexels.com/photos/9811853/pexels-photo-9811853.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+	--imgRum1: url("https://images.unsplash.com/photo-1630541010111-1bd604c9aba2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZGFpcXVpcmklMjBjb2NrdGFpbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
+	--imgRum2: url("src/images/cocktails/leiliane-fagundes-1-PGBJywxOk-unsplash.jpg");
+	--imgRum3: url("https://images.unsplash.com/photo-1622720757991-6590da48aa50?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmFzcGJlcnJ5JTIwbW9qaXRvJTIwY29ja3RhaWx8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60");
+	--imgGin1: url("https://images.unsplash.com/photo-1497534446932-c925b458314e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8dG9tJTIwY29sbGlucyUyMGNvY2t0YWlsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
+	--imgGin2: url("https://images.unsplash.com/photo-1601924381523-019b78541b95?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGF2aWF0aW9uJTIwY29ja3RhaWx8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60");
+	--imgGin3: url("https://images.unsplash.com/photo-1512103865222-dcf9531c9961?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGVndSUyMGNsdWIlMjBjb2NrdGFpbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
+	background-color: var(--mycolor);
+}
+
+.menu {
+	display: flex;
+	flex-direction: column;
+	align-items: space-evenly;
+}
+
+.container1,
+.container2,
+.container3 {
+	width: auto;
+	margin: 2em auto;
+	padding: 1.5em 2.5rem;
+	display: block;
+	height: 700px;
+}
+
+div h2 {
+	margin-top: 1rem;
+	font-size: 5em;
+	color: var(--font-hover-color);
+}
+
+.day,
+.classic,
+.discover {
+	display: grid;
+	grid-template: repeat(1, 300px) / repeat(3, auto);
+	grid-gap: 1.5rem;
+	grid-auto-flow: row;
+	margin: 2em auto;
+	grid-template-areas: "A B C";
+	justify-content: center;
+	justify-items: center;
+}
+
+.menu  .card:hover {
+	opacity: 0.5;
+	transition: 0.5s;
+	border: 5px solid var(--font-hover-color);
+	border-radius: 3.3rem;
+	}
+
+.card {
+	height: 520px;
+	border-radius: 1.5rem;
+	border: none;
+	overflow: hidden;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card .pic {
+	width: 100%;
+	height: 400px;
+	border-top-left-radius: 1.5rem;
+	border-top-right-radius: 1.5rem;
+	background-position: center;
+	background-size: cover;
+}
+
+.description {
+	display: grid;
+	grid-template: repeat(3, auto) / repeat(2, minmax(50px, 200px));
+	grid-template-areas: "title title" "diff  rat" ".   fav";
+	justify-items: center;
+	justify-content: space-between;
+	background: var(--font-hover-color);
+	color: var(--font-in-elements);
+	height: 120px;
+}
+
+
+/*Title Cocktail*/
+
+.description h3 {
+	grid-area: title;
+	/*position in the grid*/
+	justify-self: center;
+	/*Title in the center*/
+	margin: 0;
+	padding: 0.3em 0;
+	font-size: 1.8em;
+	text-align: center;
+	align-self: center;
+}
+
+
+/*Difficulty preparation*/
+
+.description h4 {
+	grid-area: diff;
+	/*position in the grid*/
+	height: 1em;
+	margin: auto;
+	/*for positioning elements*/
+	align-self: start;
+	padding-bottom: 0.5em;
+	font-size: 1.4em;
+}
+
+
+/*CSS for stars*/
+
+.ratings11,
+.ratings12,
+.ratings13,
+.ratings21,
+.ratings22,
+.ratings23,
+.ratings31,
+.ratings32,
+.ratings33 {
+	transform: scale(1.1);
+	display: inline-flex;
+	/*All items are in a row*/
+	width: 2em;
+	height: 2em;
+	align-items: center;
+	color: #ffc400;
+	/*Make stars yellow*/
+	grid-area: rat;
+	/*position in the grid*/
+	margin: auto;
+	/*for positioning elements*/
+}
+
+.description input,
+.heart input {
+	display: none;
+	/*Hide input box for all Stars and Hearts*/
+}
+
+.ratings11 input+label,
+.ratings12 input+label,
+.ratings13 input+label,
+.ratings21 input+label,
+.ratings22 input+label,
+.ratings23 input+label,
+.ratings31 input+label,
+.ratings32 input+label,
+.ratings33 input+label {
+	cursor: pointer;
+	width: 50px;
+	background: var(--font-hover-color);
+}
+
+.ratings11 input:checked+label~label,
+.ratings12 input:checked+label~label,
+.ratings13 input:checked+label~label,
+.ratings21 input:checked+label~label,
+.ratings22 input:checked+label~label,
+.ratings23 input:checked+label~label,
+.ratings33 input:checked+label~label,
+.ratings31 input:checked+label~label,
+.ratings32 input:checked+label~label,
+.ratings33 input:checked+label~label
+/*By clickung one label from the series makes color black*/
+
+{
+	color: rgb(20, 19, 19);
+}
+
+
+/*CSS for all 9 hearts*/
+
+div.heart {
+	margin: 0.5em 5em 0 auto;
+	grid-area: fav;
+	/*position in the grid*/
+	position: relative;
+}
+
+#fav11+label:before,
+#fav12+label:before,
+#fav13+label:before,
+#fav21+label:before,
+#fav22+label:before,
+#fav23+label:before,
+#fav31+label:before,
+#fav32+label:before,
+#fav33+label:before {
+	content: "\1F5A4";
+	/*Unicode Blackheart*/
+}
+
+#fav11:checked+label::before,
+#fav12:checked+label::before,
+#fav13:checked+label::before,
+#fav21:checked+label::before,
+#fav22:checked+label::before,
+#fav23:checked+label::before,
+#fav31:checked+label::before,
+#fav32:checked+label::before,
+#fav33:checked+label::before {
+	background-color: transparent;
+}
+
+#fav11:checked+label::after,
+#fav12:checked+label::after,
+#fav13:checked+label::after,
+#fav21:checked+label::after,
+#fav22:checked+label::after,
+#fav23:checked+label::after,
+#fav31:checked+label::after,
+#fav32:checked+label::after,
+#fav33:checked+label::after {
+	color: Black;
+	/*color for the label (but we want only letters!)*/
+	border: 1px solid transparent;
+	/*Transparent border for the label (not black!)*/
+	content: "❤️ Liked!";
+	position: absolute;
+	right: -4.7em;
+	top: -.01em;
+	/*If click the second heart overlapes the black*/
+	width: 6em;
+	height: 4em;
+}
+
+
+/*Grid definition for the 3 containers with pictures*/
+
+.pic.teq1 {
+	grid-area: A;
+	background-image: var(--imgTeq1);
+}
+
+.pic.vod1 {
+	grid-area: B;
+	background-image: var(--imgVod1);
+}
+
+.pic.rum1 {
+	grid-area: C;
+	background-image: var(--imgRum1);
+}
+
+.pic.rum2 {
+	grid-area: A;
+	background-image: var(--imgRum2);
+}
+
+.pic.vod2 {
+	grid-area: B;
+	background-image: var(--imgVod2);
+}
+
+.pic.gin3 {
+	grid-area: C;
+	background-image: var(--imgGin3);
+}
+
+.pic.rum3 {
+	grid-area: A;
+	background-image: var(--imgRum3);
+}
+
+.pic.gin1 {
+	grid-area: B;
+	background-image: var(--imgGin1);
+}
+
+.pic.teq3 {
+	grid-area: C;
+	background-image: var(--imgTeq3);
+}
+
+
+/*Yegor part*/
+
+
+/*Header*/
+
+header {
+	display: flex;
+	background-color: var(--nav-color)
+}
+
+.bottom_part li,
+.bottom_part a {
+	font-family: "Source Serif 4", Helvetica, sans-serif;
+	font-weight: 700;
+	font-size: 1.3rem;
+	color: var(--font-in-elements);
+	text-decoration: none;
+}
+
+.logo {
+	cursor: pointer;
+	height: 4rem;
+}
+
+.top_part {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.profile_icon {
+	cursor: pointer;
+	width: auto;
+	height: 2.8rem;
+    margin-top: 5px;
+}
+
+/*#search_container {}*/
+
+#search_input {
+	width: 55vw;
+	height: 3vw;
+}
+
+button {
+	height: 3vw;
+	width: 9vw;
+	border: none;
+	border-radius: 3px;
+	transition: all 0.4s ease 0s;
+	background: var(--border-button);
+	color: var(--font-in-elements);
+	font-size: 1rem;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+button:hover {
+	background: var(--font-hover-color);
+}
+
+.bottom_part {
+	background-color: var(--nav-subcolor);
+	text-align: center;
+	border-top: 2px solid var(--border-button);
+}
+
+ul li {
+	display: inline-block;
+	list-style: none;
+	padding: 0 4% 10px 4%; 
+}
+
+li a {
+	transition: all 0.4s ease 0s;
+}
+
+li a:hover {
+	color: var(--font-hover-color);
+}
+
+
+/*Footer*/
+
+footer {
+	background-color: var(--nav-color);
+	text-align: center;
+	font-size: 1.3rem;
+	padding: 20px;
+	margin-top: 30rem;
+	color: var(--font-in-elements);
+}
+
+
+@media only screen and (max-width: 1300px) {
+
+    body { font-size:0.7em;}
+
+	.container1,
+	.container2,
+	.container3 {
+	width: 100%;
+	margin: 1em auto;
+	padding: .5em 2.5rem;
+	display: block;
+	height: auto;
+	text-align: center;
+	}
+
+
+	div h2 {
+		/*padding-left: 5%;*/
+		margin-top: 0.9em;
+		font-size: 3.3em;	
+	}
+
+	.day,
+	.classic,
+	.discover {
+	display: grid;
+	grid-template: repeat(1, 300px) / repeat(3, 300px);
+	grid-gap: 0.9rem;
+
+	grid-template-areas: "A B C";
+}
+
+	.card {
+		height: auto;
+		width: 300px;
+		border-radius: 1.9rem;
+		border: none;		
+	}
+
+	.menu  .card:hover {
+		opacity: 0.5;
+		transition: 0.3s;
+		border: 4px solid var(--font-hover-color);
+		border-radius: 2.2rem;
+		}
+
+
+
+	.card .pic {
+		width: auto; height:200px;
+		border-top-left-radius: 1.9rem;
+		border-top-right-radius: 1.9rem;
+	}
+
+	.description {
+		display: grid;
+		grid-template: repeat(3, auto) / 55% 45%;
+		grid-template-areas: "title title" "diff  rat" ".   fav";
+		justify-items: center;
+		justify-content: center;
+	}
+
+
+
+	#fav11:checked+label::after,
+	#fav12:checked+label::after,
+	#fav13:checked+label::after,
+	#fav21:checked+label::after,
+	#fav22:checked+label::after,
+	#fav23:checked+label::after,
+	#fav31:checked+label::after,
+	#fav32:checked+label::after,
+	#fav33:checked+label::after {
+		position: absolute;
+		right: -3.9em;
+		top: .06em;
+		/*If click the second heart overlapes the black*/
+	}
+
+
+    
+}
+
+@media only screen and (max-width: 850px) {
+	body { font-size:0.6em;}
+
+	.container1,
+	.container2,
+	.container3 {
+	width: auto;
+	margin: 1em 0.5rem;
+	padding: .5em .5rem;
+	display: block;
+	height: auto;
+	text-align: center;
+	}
+
+	div h2 {
+	/*padding-left: 5%;*/
+	margin-top: 0.5em;
+	font-size: 3.3em;
+	}
+
+	.day,
+	.classic,
+	.discover {
+		display: grid;
+		grid-template: repeat(3, 320px) / repeat(1, minmax(100px ,250px));
+		grid-gap: 1rem;
+		grid-auto-flow: row;
+		align-content: center;
+		justify-content: center;
+		margin: 1em 0.5rem;
+		grid-template-areas: "A" "B" "C";
+	}
+
+	.card {
+		height: auto;
+		border-radius: 1.5rem;
+		border: none;	
+	}
+	
+	.card .pic {
+		width: auto; height:200px;
+		border-top-left-radius: 1.5rem;
+		border-top-right-radius: 1.5rem;
+	}
+	.menu  .card:hover {
+		opacity: 0.5;
+		transition: 0.3s;
+		border: 3px solid var(--font-hover-color);
+		border-radius: 1.6rem;
+	}
+
+
+	.description {
+		display: grid;
+		grid-template: repeat(3, minmax(20px, 30px)) / repeat(2, 150px);
+		grid-template-areas: "title title" "diff  rat" ".   fav";
+		height: auto;
+	}
+
+	#fav11:checked+label::after,
+	#fav12:checked+label::after,
+	#fav13:checked+label::after,
+	#fav21:checked+label::after,
+	#fav22:checked+label::after,
+	#fav23:checked+label::after,
+	#fav31:checked+label::after,
+	#fav32:checked+label::after,
+	#fav33:checked+label::after {
+		position: absolute;
+		right: -4em;
+		top: -.01em;/*If click the second heart overlapes the black*/
+	
+	}
+}
+
+	
+@media only screen and (max-width: 750px) {
+    .logo {
+        display: none;
+    }
+    .profile_icon {
+        height: 3rem;
+        margin-top: 5px;
+    }
+    #search_input {
+        width: 20rem;
+        height: 3rem;
+    }
+    button {
+        height: 3.1rem;
+        width: 6rem;
+    }
+    .top_part {
+        height: 5rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+        /*Header*/
+
+    .top_part {
+        display:none;
+    }
+
+    h1 {
+        font-size: 3rem
+    }
+
+    ul li {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
+}
